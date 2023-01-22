@@ -9,18 +9,18 @@ import ScrollToTop from '../components/Template/ScrollToTop';
 
 const Main = (props) => (
   <HelmetProvider>
-    <Analytics/>
-    <ScrollToTop/>
+    <Analytics />
+    <ScrollToTop />
     <Helmet titleTemplate="%s | Michael D'Angelo" defaultTitle="Michael D'Angelo" defer={false}>
       {props.title && <title>{props.title}</title>}
-      <meta name="description" content={props.description}/>
+      <meta name="description" content={props.description} />
     </Helmet>
     <div id="wrapper">
-      <Navigation/>
+      <Navigation />
       <div id="main">
         {props.children}
       </div>
-      {props.fullPage ? null : <SideBar/>}
+      {props.fullPage ? null : <SideBar />}
     </div>
   </HelmetProvider>
 );
