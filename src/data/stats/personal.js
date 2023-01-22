@@ -5,7 +5,7 @@ const Age = () => {
 
   const tick = () => {
     const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
-    const birthTime = new Date('1990-02-05T09:24:00');
+    const birthTime = new Date('1997-03-21T09:24:00');
     setAge(((Date.now() - birthTime) / divisor).toFixed(11));
   };
 
@@ -25,16 +25,21 @@ const data = [
     value: <Age />,
   },
   {
-    key: 'countries',
-    label: 'Countries visited',
-    value: 53,
+    key: 'hometown',
+    label: 'Hometown',
+    value: 'DaLian',
     link:
-      'https://www.google.com/maps/d/embed?mid=1iBBTscqateQ93pWFVfHCUZXoDu8&z=2',
+      'https://en.wikipedia.org/wiki/Dalian',
   },
   {
-    key: 'location',
-    label: 'Current city',
-    value: 'New York, NY',
+    key: 'languages',
+    label: 'Languages',
+    value: 'Mandarin, English, Japanese',
+  },
+  {
+    key: 'real',
+    label: 'Real languages',
+    value: 'Java, Go, Python',
   },
 ];
 
