@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -24,14 +24,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-#    - name: Lint
-#      run: npm run lint
+
     - name: Build and Statically Render
       run: npm run predeploy
-      env:
-        NODE_ENV: development
     - name: Test
       run: npm test
-      env:
-        NODE_ENV: development

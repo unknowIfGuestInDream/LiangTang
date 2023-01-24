@@ -60,7 +60,7 @@ on:
 
 jobs:
   deployment:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     environment: production
     steps:
     - name: Checkout
