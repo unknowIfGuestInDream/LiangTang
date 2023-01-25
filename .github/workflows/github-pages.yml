@@ -72,7 +72,7 @@ jobs:
       with:
         node-version-file: '.nvmrc'
     - name: Install
-      run: npm install
+      run: npm ci --cache .npm --quiet --no-progress
     - name: Build and Deploy
       env:
         NODE_ENV: production
