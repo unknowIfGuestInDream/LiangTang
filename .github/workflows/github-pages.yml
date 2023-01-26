@@ -4,39 +4,35 @@ on:
   push:
     branches: [ master ]
 
-#jobs:
-#  deploy-gh-pages:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v3
-#        with:
-#          fetch-depth: 0
-#          submodules: true
-#
-#      - name: set Node.js
-#        uses: actions/setup-node@v3
-#        with:
-#          node-version: 16
-#          cache: npm
-#
-#      - name: Install npm
-#        run: npm install
-#
-#      - name: Build Blog
-#        env:
-#          NODE_OPTIONS: --max_old_space_size=8192
-#        run: npm run build:vite
-#      #        run: |-
-#      #          npm run docs:build
-#      #          > docs/.vuepress/dist/.nojekyll
-#
-#      - name: Deploy
-#        uses: JamesIves/github-pages-deploy-action@v4
-#        with:
-#          # 这是文档部署到的分支名称
-#          branch: gh-pages
-#          folder: docs/.vuepress/dist
+jobs:
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: set Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: npm
+
+      - name: Install npm
+        run: npm install
+
+      - name: Build Blog
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: npm run predeploy
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build
 
 #  deploy-server:
 #    runs-on: ubuntu-latest
@@ -58,27 +54,27 @@ on:
 #          REMOTE_USER: ${{ secrets.REMOTE_USER }}
 #          TARGET: ${{ secrets.TARGET }}
 
-jobs:
-  deployment:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: npm
-      - name: Install
-        run: npm ci
-      - name: Build and Deploy
-        env:
-          NODE_ENV: production
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "Automated"
-          git config user.email "actions@users.noreply.github.com"
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/unknowIfGuestInDream/LiangTang.git
-          npm run deploy
+#jobs:
+#  deployment:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#        with:
+#          persist-credentials: false
+#      - name: Setup Node
+#        uses: actions/setup-node@v3
+#        with:
+#          node-version: 16
+#          cache: npm
+#      - name: Install
+#        run: npm ci
+#      - name: Build and Deploy
+#        env:
+#          NODE_ENV: production
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        run: |
+#          git config user.name "Automated"
+#          git config user.email "actions@users.noreply.github.com"
+#          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/unknowIfGuestInDream/LiangTang.git
+#          npm run deploy
