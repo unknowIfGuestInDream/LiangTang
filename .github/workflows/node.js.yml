@@ -20,7 +20,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - name: Build and Statically Render
-      run: npm run predeploy
+#    - name: Build and Statically Render
+#      run: npm run predeploy
     - name: Test
       run: npm test
+      env:
+        NODE_ENV: development
