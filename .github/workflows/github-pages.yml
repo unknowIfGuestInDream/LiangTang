@@ -1,68 +1,44 @@
 name: GitHub Pages
 
-#on:
-#  push:
-#    branches: [ master ]
-#
-#jobs:
-#  deploy-gh-pages:
-#    runs-on: ubuntu-latest
-#    permissions:
-#      contents: write
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v3
-#        with:
-#          fetch-depth: 0
-#          submodules: true
-#
-#      - name: set Node.js
-#        uses: actions/setup-node@v3
-#        with:
-#          node-version: 16
-#          cache: npm
-#
-#      - name: Install npm
-#        run: npm install
-#
-#      - name: Build Blog
-#        env:
-#          NODE_OPTIONS: --max_old_space_size=8192
-#        run: npm run predeploy
-#
-#      - name: Deploy
-#        uses: JamesIves/github-pages-deploy-action@v4
-#        with:
-#          branch: gh-pages
-#          folder: build
-#
-#  deploy-server:
-#    runs-on: ubuntu-latest
-#    needs: deploy-gh-pages
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v3
-#        with:
-#          ref: gh-pages
-#          fetch-depth: 0
-#
-#      - name: Deploy to Server
-#        uses: easingthemes/ssh-deploy@v3.4.5
-#        env:
-#          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
-#          ARGS: "-avzr --delete"
-#          SOURCE: ""
-#          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-#          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-#          TARGET: ${{ secrets.TARGET }}
-
 on:
   push:
-    branches: [ gh-pages ]
+    branches: [ master ]
 
 jobs:
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: set Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: npm
+
+      - name: Install npm
+        run: npm install
+
+      - name: Build Blog
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build
+
   deploy-server:
     runs-on: ubuntu-latest
+    needs: deploy-gh-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
