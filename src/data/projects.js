@@ -7,7 +7,7 @@ const data = [
     date: '2021-06-18',
     desc:
       'It is used to generate java code through stored procedures of databases such as oracle, '
-      +'and to generate crud stored procedures according to database tables, etc.',
+      + 'and to generate crud stored procedures according to database tables, etc.',
   },
   {
     title: 'javafxTool',
