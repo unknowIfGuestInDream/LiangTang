@@ -28,7 +28,7 @@ const data = [
     icon: faTwitter,
   },
   {
-    link: 'mailto:tang97155@gmail.com',
+    link: 'mailto:liang.tang.cx@gmail.com',
     label: 'Email',
     icon: faEnvelope,
   },
