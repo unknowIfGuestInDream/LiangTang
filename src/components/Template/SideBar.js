@@ -29,10 +29,11 @@ const SideBar = () => (
         </li>
       </ul>
     </section>
-
     <section id="footer">
       <ContactIcons />
-      <p className="copyright">&copy; Liang Tang <Link to="/">tlcsdm.com</Link>.</p>
+      <p className="copyright">&copy; Liang Tang <Link to="/">tlcsdm.com</Link>. </p>
+      <p className="copyright"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">辽ICP备2021000033号-1</a></p>
+      <p className="copyright"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=21020302000532" rel="noreferrer" target="_blank">辽公网安备21020302000532</a></p>
     </section>
   </section>
 );
