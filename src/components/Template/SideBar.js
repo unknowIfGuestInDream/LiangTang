@@ -21,7 +21,7 @@ const SideBar = () => (
       <h2>About</h2>
       <p>Hi, I&apos;m Liang Tang. I like building things.
         I am a java engineer of <a href="http://www.ipdchina.net/japanese/index.html">Ipdchina</a>,
-        and good at web development and javafx GUI development.
+        and good at web development ,javafx GUI and Eclipse RCP development .
       </p>
       <ul className="actions">
         <li>
