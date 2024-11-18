@@ -5,7 +5,7 @@ I was born and live in Dalian, and I am currently a java engineer in Ipdchina. I
 
 # Currently
 
-In Ipdchina, I mainly use javafx for development, and at the same time I study Japanese on weekends, trying my best to pass the Japanese N2 exam.
+In Ipdchina, I mainly use javafx and swt for development, and at the same time I study Japanese on weekends, trying my best to pass the Japanese N2 exam.
 
 # I like
 

@@ -16,7 +16,16 @@ const data = [
     image: '/images/projects/javafxTool.png',
     date: '2022-10-16',
     desc:
-      'Scaffolding for javafx development based on JDK17, JavaFx17, controlsfx 11 and maven.',
+      'Scaffolding for javafx development based on JDK17, JavaFx21, controlsfx 11 and maven.',
+  },
+  {
+    title: 'tlstudio',
+    subtitle: 'tlstudio',
+    link: 'https://github.com/unknowIfGuestInDream/tlstudio',
+    image: '/images/projects/SWT_Example.png',
+    date: '2024-11-16',
+    desc:
+        'Currently includes SWT examples, and will support jface and other examples in the future.',
   },
   {
     title: 'Document',
