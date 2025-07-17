@@ -19,6 +19,42 @@ const data = [
       'Scaffolding for javafx development based on JDK17, JavaFx21, controlsfx 11 and maven.',
   },
   {
+    title: 'eclipse-openexplorer',
+    subtitle: 'eclipse-openexplorer',
+    link: 'https://github.com/tlcsdm/eclipse-openexplorer',
+    image: '/images/projects/openexplorer.png',
+    date: '2025-07-18',
+    desc:
+        'OpenExplorer is a plugin for Eclipse, it opened the files selected in “Package Explorer” and “Navigator” in the system file browser.',
+  },
+  {
+    title: 'eclipse-iconpreview',
+    subtitle: 'eclipse-iconpreview',
+    link: 'https://github.com/tlcsdm/eclipse-iconpreview',
+    image: '/images/projects/iconpreview.png',
+    date: '2025-07-18',
+    desc:
+        'IconPreview is a plugin for Eclipse, it opened the files selected in “Package Explorer” and “Navigator” in the system file browser.',
+  },
+  {
+    title: 'eclipse-translation',
+    subtitle: 'eclipse-translation',
+    link: 'https://github.com/tlcsdm/eclipse-translation',
+    image: '/images/projects/translation.png',
+    date: '2025-07-18',
+    desc:
+        'This plugin integrates translation capabilities into the Eclipse IDE.',
+  },
+  {
+    title: 'eclipse-minimap',
+    subtitle: 'eclipse-minimap',
+    link: 'https://github.com/tlcsdm/eclipse-minimap',
+    image: '/images/projects/minimap.png',
+    date: '2025-07-18',
+    desc:
+        'Eclipse plugin provides awesome way to navigate your source code.',
+  },
+  {
     title: 'tlstudio',
     subtitle: 'tlstudio',
     link: 'https://github.com/unknowIfGuestInDream/tlstudio',
