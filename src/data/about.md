@@ -5,7 +5,7 @@ I was born and live in Dalian, and I am currently a java engineer in Ipdchina. I
 
 # Currently
 
-In Ipdchina, I mainly use javafx and swt for development, and at the same time I study Japanese on weekends, trying my best to pass the Japanese N2 exam.
+In Ipdchina, I mainly use JavaFX and Eclipse RCP for development, and at the same time I study Japanese on weekends, trying my best to pass the Japanese exam.
 
 # I like
 
@@ -28,4 +28,3 @@ In Ipdchina, I mainly use javafx and swt for development, and at the same time I
 
 - [Document(Contains the knowledge that I think needs to be recorded on the way of learning)](https://www.tlcsdm.com)
 - [Blog(Although it is said to be a blog, I have hardly run it)](https://blog.tlcsdm.com/)
-- I plan to build a website related to file management, but the high cost prevents me.
