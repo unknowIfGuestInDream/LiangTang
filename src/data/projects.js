@@ -34,7 +34,7 @@ const data = [
     image: '/images/projects/iconpreview.png',
     date: '2025-07-18',
     desc:
-        'IconPreview is a plugin for Eclipse, it opened the files selected in “Package Explorer” and “Navigator” in the system file browser.',
+        'IconPreview is a lightweight Eclipse plugin that allows you to preview image files in the Eclipse "Package Explorer" view.',
   },
   {
     title: 'eclipse-translation',
@@ -53,6 +53,24 @@ const data = [
     date: '2025-07-18',
     desc:
         'Eclipse plugin provides awesome way to navigate your source code.',
+  },
+  {
+    title: 'eclipse-fullscreen',
+    subtitle: 'eclipse-fullscreen',
+    link: 'https://github.com/tlcsdm/eclipse-fullscreen',
+    image: '/images/projects/fullscreen.png',
+    date: '2025-08-19',
+    desc:
+        'Eclipse plugin to make Eclipse go fullscreen and save space.',
+  },
+  {
+    title: 'eclipse-folding',
+    subtitle: 'eclipse-folding',
+    link: 'https://github.com/tlcsdm/eclipse-folding',
+    image: '/images/projects/folding.png',
+    date: '2025-08-19',
+    desc:
+        'This plugin enhances code folding in Eclipse IDE..',
   },
   {
     title: 'tlstudio',
