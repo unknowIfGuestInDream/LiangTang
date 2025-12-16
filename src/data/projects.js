@@ -118,6 +118,15 @@ const data = [
         'Multiple cursor support for Eclipse IDE',
   },
   {
+    title: 'eclipse-maven-view',
+    subtitle: 'eclipse-maven-view',
+    link: 'https://github.com/tlcsdm/eclipse-maven-view',
+    image: '/images/projects/mavenview.png',
+    date: '2025-12-16',
+    desc:
+        'A plug-in that recreates IntelliJ IDEA\'s Maven View for Eclipse.',
+  },
+  {
     title: 'tlstudio',
     subtitle: 'tlstudio',
     link: 'https://github.com/unknowIfGuestInDream/tlstudio',
