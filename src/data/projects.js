@@ -70,7 +70,52 @@ const data = [
     image: '/images/projects/folding.png',
     date: '2025-08-19',
     desc:
-        'This plugin enhances code folding in Eclipse IDE..',
+        'This plugin enhances code folding in Eclipse IDE.',
+  },
+  {
+    title: 'eclipse-autofill-arguments',
+    subtitle: 'eclipse-autofill-arguments',
+    link: 'https://github.com/tlcsdm/eclipse-autofill-arguments',
+    image: '/images/projects/autofill.gif',
+    date: '2025-12-16',
+    desc:
+        'This plugin guesses the call parameters by the callee parameter names.',
+  },
+  {
+    title: 'eclipse-generateAllSetter',
+    subtitle: 'eclipse-generateAllSetter',
+    link: 'https://github.com/tlcsdm/eclipse-generateAllSetter',
+    image: '/images/projects/generateAllSetter.gif',
+    date: '2025-12-16',
+    desc:
+        'This plugin generates call to setter method value for class.',
+  },
+  {
+    title: 'eclipse-method-sorter',
+    subtitle: 'eclipse-method-sorter',
+    link: 'https://github.com/tlcsdm/eclipse-method-sorter',
+    image: '/images/projects/methodSorter.gif',
+    date: '2025-12-16',
+    desc:
+        'This plugin provides techniques to sort methods in Java-classes, aiming to increase the readability of the source code.',
+  },
+  {
+    title: 'eclipse-fixcnchar',
+    subtitle: 'eclipse-fixcnchar',
+    link: 'https://github.com/tlcsdm/eclipse-fixcnchar',
+    image: '/images/projects/fixcnchar.png',
+    date: '2025-12-16',
+    desc:
+        '能够自动将全角中文标点（如中文逗号、分号、句号、引号等）替换为半角标点。该工具帮助开发者在编码时保持标点统一，无需频繁切换输入法。',
+  },
+  {
+    title: 'eclipse-multicursor',
+    subtitle: 'eclipse-multicursor',
+    link: 'https://github.com/tlcsdm/eclipse-multicursor',
+    image: '/images/projects/multicursor.gif',
+    date: '2025-12-16',
+    desc:
+        'Multiple cursor support for Eclipse IDE',
   },
   {
     title: 'tlstudio',
