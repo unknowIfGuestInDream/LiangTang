@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+'use client';
+
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import CategoryButton from './Skills/CategoryButton';
@@ -95,11 +97,6 @@ Skills.propTypes = {
     name: PropTypes.string,
     color: PropTypes.string,
   })),
-};
-
-Skills.defaultProps = {
-  skills: [],
-  categories: [],
 };
 
 export default Skills;

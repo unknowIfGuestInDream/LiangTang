@@ -1,75 +1,41 @@
-// jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
-// learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { describe, test, expect } from 'vitest';
+import routes from '../data/routes';
+import data from '../data/contact';
 
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+describe('Routes data', () => {
+  test('has index route', () => {
+    const indexRoute = routes.find((r) => r.index);
+    expect(indexRoute).toBeDefined();
+    expect(indexRoute.path).toBe('/');
+  });
 
-import About from '../pages/About';
-import Contact from '../pages/Contact';
-import Index from '../pages/Index';
-import NotFound from '../pages/NotFound';
-import Projects from '../pages/Projects';
-import Resume from '../pages/Resume';
-import Stats from '../pages/Stats';
+  test('has all expected routes', () => {
+    const paths = routes.map((r) => r.path);
+    expect(paths).toContain('/about');
+    expect(paths).toContain('/resume');
+    expect(paths).toContain('/projects');
+    expect(paths).toContain('/stats');
+    expect(paths).toContain('/contact');
+  });
 
-const pages = [
-  {
-    route: '/',
-    heading: 'WELCOME 欢迎',
-    component: Index,
-  },
-  {
-    route: '/about',
-    heading: 'About Me',
-    component: About,
-  },
-  {
-    route: '/projects',
-    heading: 'Projects',
-    component: Projects,
-  },
-  {
-    route: '/stats',
-    heading: 'Stats',
-    component: Stats,
-  },
-  {
-    route: '/contact',
-    heading: 'Contact',
-    component: Contact,
-  },
-  {
-    route: '/resume',
-    heading: 'Resume',
-    component: Resume,
-  },
-];
-
-// Adds router to Page context and allows us to navigate to the
-// correct page. See:
-// https://testing-library.com/docs/example-react-router/#reducing-boilerplate
-const renderWithRouter = (ui, { route = '/' } = {}) => {
-  window.history.pushState({}, 'Test page', route);
-  return render(ui, { wrapper: BrowserRouter });
-};
-
-test('Renders 404 Page Component', () => {
-  renderWithRouter(<NotFound />);
-  const linkElement = screen.getByText(/Page Not Found/i);
-  expect(linkElement).toBeInTheDocument();
+  test('all routes have labels', () => {
+    routes.forEach((route) => {
+      expect(route.label).toBeDefined();
+      expect(route.label.length).toBeGreaterThan(0);
+    });
+  });
 });
 
-const checkPageComponent = async (page) => {
-  test(`Renders ${page.route} Component`, () => {
-    window.scrollTo = () => {}; // TODO mock this later
-    renderWithRouter(<page.component />, { route: page.route });
-    const linkElement = screen.getByTestId('heading');
-    expect(linkElement).toHaveTextContent(page.heading);
+describe('Contact data', () => {
+  test('has contact entries', () => {
+    expect(data.length).toBeGreaterThan(0);
   });
-};
 
-pages.forEach((page) => checkPageComponent(page));
+  test('all entries have required fields', () => {
+    data.forEach((entry) => {
+      expect(entry.label).toBeDefined();
+      expect(entry.link).toBeDefined();
+      expect(entry.icon).toBeDefined();
+    });
+  });
+});

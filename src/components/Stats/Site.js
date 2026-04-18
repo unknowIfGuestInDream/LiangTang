@@ -1,4 +1,6 @@
-import React, { useState, useCallback, useEffect } from 'react';
+'use client';
+
+import { useState, useCallback, useEffect } from 'react';
 
 import Table from './Table';
 import initialData from '../../data/stats/site';

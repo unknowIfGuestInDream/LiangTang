@@ -1,9 +1,8 @@
-import React, { Suspense, lazy, useState } from 'react';
+'use client';
 
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import Link from 'next/link';
 import routes from '../../data/routes';
-
-const Menu = lazy(() => import('react-burger-menu/lib/menus/slide'));
 
 const Hamburger = () => {
   const [open, setOpen] = useState(false);
@@ -23,19 +22,26 @@ const Hamburger = () => {
           )}
         </ul>
       </nav>
-      <Suspense fallback={<></>}>
-        <Menu right isOpen={open}>
-          <ul className="hamburger-ul">
-            {routes.map((l) => (
-              <li key={l.label}>
-                <Link to={l.path} onClick={() => setOpen(!open)}>
-                  <h3 className={l.index && 'index-li'}>{l.label}</h3>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Menu>
-      </Suspense>
+      {open && (
+        <div className="bm-menu-wrap" style={{ position: 'fixed', right: 0, top: 0, height: '100%', width: '300px', zIndex: 1100 }}>
+          <div className="bm-menu" style={{ height: '100%', width: '100%', padding: '2.5em 1.5em', background: '#373a47', overflowY: 'auto' }}>
+            <ul className="hamburger-ul">
+              {routes.map((l) => (
+                <li key={l.label}>
+                  <Link href={l.path} onClick={() => setOpen(false)}>
+                    <h3 className={l.index ? 'index-li' : undefined}>{l.label}</h3>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div
+            className="bm-overlay"
+            style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0,0,0,0.3)', zIndex: -1 }}
+            onClick={() => setOpen(false)}
+          />
+        </div>
+      )}
     </div>
   );
 };

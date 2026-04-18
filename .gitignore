@@ -50,3 +50,10 @@ build/
 
 # Nohup
 nohup.out
+
+# Next.js
+.next/
+.swc/
+.turbo/
+out/
+next-env.d.ts

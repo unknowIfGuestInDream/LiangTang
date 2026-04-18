@@ -21,25 +21,26 @@ jobs:
           fetch-depth: 0
           submodules: true
 
-      - name: set Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: ".nvmrc"
           cache: npm
 
       - name: Install npm
-        run: npm install
+        run: npm ci
 
-      - name: Build Blog
+      - name: Build
         env:
           NODE_OPTIONS: --max_old_space_size=8192
+          NODE_ENV: production
         run: npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build
+          folder: out
 
   deploy-server:
     runs-on: ubuntu-latest
