@@ -4,9 +4,7 @@ const positions = [
     position: 'Java Engineer',
     link: 'http://www.ipdchina.net/',
     daterange: 'April 2022 - PRESENT',
-    points: [
-      'Development for Smart Configurator.',
-    ],
+    points: ['Development for Smart Configurator.'],
   },
   {
     company: 'Newangels',

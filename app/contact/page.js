@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import EmailLink from '@/components/Contact/EmailLink';
 import ContactIcons from '@/components/Contact/ContactIcons';
+import EmailLink from '@/components/Contact/EmailLink';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Contact',
@@ -12,7 +12,9 @@ export default function ContactPage() {
     <article className="post" id="contact">
       <header>
         <div className="title">
-          <h2 data-testid="heading"><Link href="/contact">Contact</Link></h2>
+          <h2 data-testid="heading">
+            <Link href="/contact">Contact</Link>
+          </h2>
         </div>
       </header>
       <div className="email-at">

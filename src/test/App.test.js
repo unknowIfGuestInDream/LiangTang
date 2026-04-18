@@ -1,6 +1,6 @@
-import { describe, test, expect } from 'vitest';
-import routes from '../data/routes';
+import { describe, expect, test } from 'vitest';
 import data from '../data/contact';
+import routes from '../data/routes';
 
 describe('Routes data', () => {
   test('has index route', () => {
@@ -19,10 +19,10 @@ describe('Routes data', () => {
   });
 
   test('all routes have labels', () => {
-    routes.forEach((route) => {
+    for (const route of routes) {
       expect(route.label).toBeDefined();
       expect(route.label.length).toBeGreaterThan(0);
-    });
+    }
   });
 });
 
@@ -32,10 +32,10 @@ describe('Contact data', () => {
   });
 
   test('all entries have required fields', () => {
-    data.forEach((entry) => {
+    for (const entry of data) {
       expect(entry.label).toBeDefined();
       expect(entry.link).toBeDefined();
       expect(entry.icon).toBeDefined();
-    });
+    }
   });
 });

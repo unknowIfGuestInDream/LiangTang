@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import Markdown from 'markdown-to-jsx';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'About',
@@ -15,7 +15,8 @@ function getAboutMarkdown() {
 
 export default function AboutPage() {
   const markdown = getAboutMarkdown();
-  const count = markdown.split(/\s+/)
+  const count = markdown
+    .split(/\s+/)
     .map((s) => s.replace(/\W/g, ''))
     .filter((s) => s.length).length;
 
@@ -23,7 +24,9 @@ export default function AboutPage() {
     <article className="post markdown" id="about">
       <header>
         <div className="title">
-          <h2 data-testid="heading"><Link href="/about">About Me</Link></h2>
+          <h2 data-testid="heading">
+            <Link href="/about">About Me</Link>
+          </h2>
           <p>(in about {count} words)</p>
         </div>
       </header>

@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import Personal from '@/components/Stats/Personal';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Stats',
@@ -11,7 +11,9 @@ export default function StatsPage() {
     <article className="post" id="stats">
       <header>
         <div className="title">
-          <h2 data-testid="heading"><Link href="/stats">Stats</Link></h2>
+          <h2 data-testid="heading">
+            <Link href="/stats">Stats</Link>
+          </h2>
         </div>
       </header>
       <Personal />

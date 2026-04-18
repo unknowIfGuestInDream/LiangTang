@@ -1,15 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Age = () => {
   const [age, setAge] = useState();
 
-  const tick = () => {
-    const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
-    const birthTime = new Date('1997-03-21T09:24:00');
-    setAge(((Date.now() - birthTime) / divisor).toFixed(11));
-  };
-
   useEffect(() => {
+    const tick = () => {
+      const divisor = 1000 * 60 * 60 * 24 * 365.2421897; // ms in an average year
+      const birthTime = new Date('1997-03-21T09:24:00');
+      setAge(((Date.now() - birthTime) / divisor).toFixed(11));
+    };
     const timer = setInterval(() => tick(), 25);
     return () => {
       clearInterval(timer);
@@ -28,8 +27,7 @@ const data = [
     key: 'hometown',
     label: 'Hometown',
     value: 'DaLian',
-    link:
-      'https://en.wikipedia.org/wiki/Dalian',
+    link: 'https://en.wikipedia.org/wiki/Dalian',
   },
   {
     key: 'languages',

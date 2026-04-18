@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
+import { useEffect, useRef, useState } from 'react';
 
 // Validates the first half of an email address.
 const validateText = (text) => {
@@ -56,33 +56,36 @@ const EmailLink = ({ loopMessage = false }) => {
   const [char, updateChar] = useState(0); // points to current char
   const [isActive, setIsActive] = useState(true); // disable when all messages are printed
 
-  useInterval(() => {
-    let newIdx = idx;
-    let newChar = char;
-    if (char - hold >= messages[idx].length) {
-      newIdx += 1;
-      newChar = 0;
-    }
-    if (newIdx === messages.length) {
-      if (loopMessage) {
-        updateIter(0);
-        updateChar(0);
-      } else {
-        setIsActive(false);
+  useInterval(
+    () => {
+      let newIdx = idx;
+      let newChar = char;
+      if (char - hold >= messages[idx].length) {
+        newIdx += 1;
+        newChar = 0;
       }
-    } else {
-      updateMessage(messages[newIdx].slice(0, newChar));
-      updateIter(newIdx);
-      updateChar(newChar + 1);
-    }
-  }, isActive ? delay : null);
+      if (newIdx === messages.length) {
+        if (loopMessage) {
+          updateIter(0);
+          updateChar(0);
+        } else {
+          setIsActive(false);
+        }
+      } else {
+        updateMessage(messages[newIdx].slice(0, newChar));
+        updateIter(newIdx);
+        updateChar(newChar + 1);
+      }
+    },
+    isActive ? delay : null,
+  );
 
   return (
     <div
       className="inline-container"
       style={validateText(message) ? {} : { color: 'red' }}
       onMouseEnter={() => setIsActive(false)}
-      onMouseLeave={() => (idx < messages.length) && setIsActive(true)}
+      onMouseLeave={() => idx < messages.length && setIsActive(true)}
     >
       <a href="mailto:liang.tang.cx@gmail.com">
         <span>{message}</span>

@@ -27,7 +27,7 @@ vi.mock('next/navigation', () => ({
 
 // Mock Next.js Link component
 vi.mock('next/link', () => ({
-  default: ({ children, ...props }) => children,
+  default: ({ children }) => children,
 }));
 
 // Mock window.scrollTo
@@ -40,7 +40,10 @@ Object.defineProperty(window, 'scrollTo', {
 const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render')) {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render')
+    ) {
       return;
     }
     originalError.call(console, ...args);

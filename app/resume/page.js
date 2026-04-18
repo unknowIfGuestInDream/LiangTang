@@ -1,15 +1,16 @@
-import Link from 'next/link';
 import Education from '@/components/Resume/Education';
 import Experience from '@/components/Resume/Experience';
-import Skills from '@/components/Resume/Skills';
 import References from '@/components/Resume/References';
+import Skills from '@/components/Resume/Skills';
 import degrees from '@/data/resume/degrees';
 import positions from '@/data/resume/positions';
-import { skills, categories } from '@/data/resume/skills';
+import { categories, skills } from '@/data/resume/skills';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Resume',
-  description: "Liang Tang's Resume. Dalian Jiaotong University, Newangels and Ipdchina.",
+  description:
+    "Liang Tang's Resume. Dalian Jiaotong University, Newangels and Ipdchina.",
 };
 
 const sections = ['Education', 'Experience', 'Skills', 'References'];
@@ -19,7 +20,9 @@ export default function ResumePage() {
     <article className="post" id="resume">
       <header>
         <div className="title">
-          <h2 data-testid="heading"><Link href="/resume">Resume</Link></h2>
+          <h2 data-testid="heading">
+            <Link href="/resume">Resume</Link>
+          </h2>
           <div className="link-container">
             {sections.map((sec) => (
               <h4 key={sec}>

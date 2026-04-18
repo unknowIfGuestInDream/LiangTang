@@ -1,7 +1,7 @@
 'use client';
 
-import Table from './Table';
 import data from '../../data/stats/personal';
+import Table from './Table';
 
 const PersonalStats = () => (
   <>

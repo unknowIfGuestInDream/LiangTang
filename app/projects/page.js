@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import Cell from '@/components/Projects/Cell';
 import data from '@/data/projects';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Projects',
@@ -12,7 +12,9 @@ export default function ProjectsPage() {
     <article className="post" id="projects">
       <header>
         <div className="title">
-          <h2 data-testid="heading"><Link href="/projects">Projects</Link></h2>
+          <h2 data-testid="heading">
+            <Link href="/projects">Projects</Link>
+          </h2>
           <p>A selection of projects that I&apos;m not too ashamed of</p>
         </div>
       </header>

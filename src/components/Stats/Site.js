@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-import Table from './Table';
 import initialData from '../../data/stats/site';
+import Table from './Table';
 
 const Stats = () => {
   const [data, setResponseData] = useState(initialData);
