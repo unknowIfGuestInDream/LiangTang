@@ -145,10 +145,19 @@ const data = [
         'Registers Renesas project config files to open with Eclipse\'s XML editor.',
   },
   {
+    title: 'eclipse-renesas-qe-devkit',
+    subtitle: 'eclipse-renesas-qe-devkit',
+    link: 'https://github.com/tlcsdm/eclipse-renesas-qe-devkit',
+    image: '/images/projects/document.png',
+    date: '2025-07-07',
+    desc:
+        'Aggregation plugin containing development plugins used for Renesas QE development.',
+  },
+  {
     title: 'eclipse-bpep',
     subtitle: 'eclipse-bpep',
     link: 'https://github.com/tlcsdm/eclipse-bpep',
-    image: '/images/projects/generateAllSetter.gif',
+    image: '/images/projects/eclipse-bpep.jpg',
     date: '2025-08-24',
     desc:
         'Builder Pattern Eclipse Plugin.',
@@ -157,7 +166,7 @@ const data = [
     title: 'eclipse-instasearch',
     subtitle: 'eclipse-instasearch',
     link: 'https://github.com/tlcsdm/eclipse-instasearch',
-    image: '/images/projects/openexplorer.png',
+    image: '/images/projects/eclipse-instasearch.png',
     date: '2025-12-18',
     desc:
         'Quick workspace file search plugin for Eclipse with instant results.',
@@ -211,7 +220,7 @@ const data = [
     title: 'vscode-patchReader',
     subtitle: 'vscode-patchReader',
     link: 'https://github.com/tlcsdm/vscode-patchReader',
-    image: '/images/projects/document.png',
+    image: '/images/projects/vscode-patchReader.png',
     date: '2026-01-30',
     desc:
         'Visualizes patch and diff files in VSCode.',
@@ -220,7 +229,7 @@ const data = [
     title: 'vscode-lvgl-builder',
     subtitle: 'vscode-lvgl-builder',
     link: 'https://github.com/tlcsdm/vscode-lvgl-builder',
-    image: '/images/projects/genCode.png',
+    image: '/images/projects/vscode-lvgl-builder.png',
     date: '2026-02-05',
     desc:
         'LVGL drag-and-drop code generation plugin for VSCode.',
@@ -229,7 +238,7 @@ const data = [
     title: 'vscode-javafx-support',
     subtitle: 'vscode-javafx-support',
     link: 'https://github.com/tlcsdm/vscode-javafx-support',
-    image: '/images/projects/javafxTool.png',
+    image: '/images/projects/vscode-javafx-support.png',
     date: '2026-02-26',
     desc:
         'JavaFX support plugin for VSCode.',
@@ -238,7 +247,7 @@ const data = [
     title: 'vscode-git-blame-info',
     subtitle: 'vscode-git-blame-info',
     link: 'https://github.com/tlcsdm/vscode-git-blame-info',
-    image: '/images/projects/openexplorer.png',
+    image: '/images/projects/vscode-git-blame-info.gif',
     date: '2026-03-08',
     desc:
         'Displays color-coded git blame annotations in the VSCode editor gutter.',
@@ -247,7 +256,7 @@ const data = [
     title: 'vscode-json-tree-view',
     subtitle: 'vscode-json-tree-view',
     link: 'https://github.com/tlcsdm/vscode-json-tree-view',
-    image: '/images/projects/document.png',
+    image: '/images/projects/vscode-json-tree-view.png',
     date: '2026-03-28',
     desc:
         'Provides a visual tree view for browsing, searching, and querying JSON files.',
