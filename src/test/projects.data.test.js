@@ -33,7 +33,7 @@ test('includes tlcsdm vscode plugin projects', () => {
   });
 });
 
-test('uses README/repo-referenced images for newly added plugin projects', () => {
+test('uses README/repo-referenced images for newly added projects', () => {
   const projectByTitle = new Map(data.map((project) => [project.title, project]));
   expect(projectByTitle.get('eclipse-bpep').image).toBe('/images/projects/eclipse-bpep.jpg');
   expect(projectByTitle.get('eclipse-instasearch').image).toBe('/images/projects/eclipse-instasearch.png');
