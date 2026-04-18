@@ -127,6 +127,141 @@ const data = [
         'A plug-in that recreates IntelliJ IDEA\'s Maven View for Eclipse.',
   },
   {
+    title: 'eclipse-copyright',
+    subtitle: 'eclipse-copyright',
+    link: 'https://github.com/tlcsdm/eclipse-copyright',
+    image: '/images/projects/document.png',
+    date: '2025-06-30',
+    desc:
+        'Fork of Eclipse-Copyright-Generator for generating copyright headers.',
+  },
+  {
+    title: 'eclipse-renesas-config-editor',
+    subtitle: 'eclipse-renesas-config-editor',
+    link: 'https://github.com/tlcsdm/eclipse-renesas-config-editor',
+    image: '/images/projects/document.png',
+    date: '2025-07-07',
+    desc:
+        'Registers Renesas project config files to open with Eclipse\'s XML editor.',
+  },
+  {
+    title: 'eclipse-renesas-qe-devkit',
+    subtitle: 'eclipse-renesas-qe-devkit',
+    link: 'https://github.com/tlcsdm/eclipse-renesas-qe-devkit',
+    image: '/images/projects/document.png',
+    date: '2025-07-07',
+    desc:
+        'Aggregation plugin containing development plugins used for Renesas QE development.',
+  },
+  {
+    title: 'eclipse-bpep',
+    subtitle: 'eclipse-bpep',
+    link: 'https://github.com/tlcsdm/eclipse-bpep',
+    image: '/images/projects/eclipse-bpep.jpg',
+    date: '2025-08-24',
+    desc:
+        'Builder Pattern Eclipse Plugin.',
+  },
+  {
+    title: 'eclipse-instasearch',
+    subtitle: 'eclipse-instasearch',
+    link: 'https://github.com/tlcsdm/eclipse-instasearch',
+    image: '/images/projects/eclipse-instasearch.png',
+    date: '2025-12-18',
+    desc:
+        'Quick workspace file search plugin for Eclipse with instant results.',
+  },
+  {
+    title: 'vscode-fixcnchar',
+    subtitle: 'vscode-fixcnchar',
+    link: 'https://github.com/tlcsdm/vscode-fixcnchar',
+    image: '/images/projects/fixcnchar.png',
+    date: '2026-01-04',
+    desc:
+        'VSCode plugin that replaces full-width Chinese punctuation with half-width punctuation.',
+  },
+  {
+    title: 'vscode-iconpreview',
+    subtitle: 'vscode-iconpreview',
+    link: 'https://github.com/tlcsdm/vscode-iconpreview',
+    image: '/images/projects/iconpreview.png',
+    date: '2026-01-06',
+    desc:
+        'IconPreview is a lightweight VSCode plugin that previews image files.',
+  },
+  {
+    title: 'vscode-translation',
+    subtitle: 'vscode-translation',
+    link: 'https://github.com/tlcsdm/vscode-translation',
+    image: '/images/projects/translation.png',
+    date: '2026-01-07',
+    desc:
+        'VSCode plugin for translation.',
+  },
+  {
+    title: 'vscode-java-method-sorter',
+    subtitle: 'vscode-java-method-sorter',
+    link: 'https://github.com/tlcsdm/vscode-java-method-sorter',
+    image: '/images/projects/methodSorter.gif',
+    date: '2026-01-10',
+    desc:
+        'Sorts methods in Java classes to improve code readability in VSCode.',
+  },
+  {
+    title: 'vscode-java-autofill-arguments',
+    subtitle: 'vscode-java-autofill-arguments',
+    link: 'https://github.com/tlcsdm/vscode-java-autofill-arguments',
+    image: '/images/projects/autofill.gif',
+    date: '2026-01-11',
+    desc:
+        'Guesses Java call arguments based on callee parameter names in VSCode.',
+  },
+  {
+    title: 'vscode-patchReader',
+    subtitle: 'vscode-patchReader',
+    link: 'https://github.com/tlcsdm/vscode-patchReader',
+    image: '/images/projects/vscode-patchReader.png',
+    date: '2026-01-30',
+    desc:
+        'Visualizes patch and diff files in VSCode.',
+  },
+  {
+    title: 'vscode-lvgl-builder',
+    subtitle: 'vscode-lvgl-builder',
+    link: 'https://github.com/tlcsdm/vscode-lvgl-builder',
+    image: '/images/projects/vscode-lvgl-builder.png',
+    date: '2026-02-05',
+    desc:
+        'LVGL drag-and-drop code generation plugin for VSCode.',
+  },
+  {
+    title: 'vscode-javafx-support',
+    subtitle: 'vscode-javafx-support',
+    link: 'https://github.com/tlcsdm/vscode-javafx-support',
+    image: '/images/projects/vscode-javafx-support.png',
+    date: '2026-02-26',
+    desc:
+        'JavaFX support plugin for VSCode.',
+  },
+  {
+    title: 'vscode-git-blame-info',
+    subtitle: 'vscode-git-blame-info',
+    link: 'https://github.com/tlcsdm/vscode-git-blame-info',
+    image: '/images/projects/vscode-git-blame-info.gif',
+    date: '2026-03-08',
+    desc:
+        'Displays color-coded git blame annotations in the VSCode editor gutter.',
+  },
+  {
+    title: 'vscode-json-tree-view',
+    subtitle: 'vscode-json-tree-view',
+    link: 'https://github.com/tlcsdm/vscode-json-tree-view',
+    image: '/images/projects/vscode-json-tree-view.png',
+    date: '2026-03-28',
+    desc:
+        'Provides a visual tree view for browsing, searching, and querying JSON files.',
+  },
+  {
     title: 'tlstudio',
     subtitle: 'tlstudio',
     link: 'https://github.com/unknowIfGuestInDream/tlstudio',
