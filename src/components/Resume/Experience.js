@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 import Job from './Experience/Job';
 
 const Experience = ({ data = [] }) => (
@@ -13,17 +11,5 @@ const Experience = ({ data = [] }) => (
     ))}
   </div>
 );
-
-Experience.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      company: PropTypes.string,
-      position: PropTypes.string,
-      link: PropTypes.string,
-      daterange: PropTypes.string,
-      points: PropTypes.arrayOf(PropTypes.string),
-    }),
-  ),
-};
 
 export default Experience;

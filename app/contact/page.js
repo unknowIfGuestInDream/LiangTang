@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import ContactIcons from '@/components/Contact/ContactIcons';
 import EmailLink from '@/components/Contact/EmailLink';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'Contact',

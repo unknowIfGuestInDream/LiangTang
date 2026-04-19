@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Education from '@/components/Resume/Education';
 import Experience from '@/components/Resume/Experience';
 import References from '@/components/Resume/References';
@@ -5,7 +6,6 @@ import Skills from '@/components/Resume/Skills';
 import degrees from '@/data/resume/degrees';
 import positions from '@/data/resume/positions';
 import { categories, skills } from '@/data/resume/skills';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'Resume',

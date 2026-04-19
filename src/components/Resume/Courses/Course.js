@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 const Course = ({ data, last = false }) => (
   <li className="course-container">
     <a href={data.link}>
@@ -13,14 +11,5 @@ const Course = ({ data, last = false }) => (
     )}
   </li>
 );
-
-Course.propTypes = {
-  data: PropTypes.shape({
-    link: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  }).isRequired,
-  last: PropTypes.bool,
-};
 
 export default Course;

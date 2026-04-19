@@ -70,9 +70,9 @@ const Hamburger = () => {
               ))}
             </ul>
           </div>
-          <div
+          <button
+            type="button"
             className="bm-overlay"
-            role="button"
             tabIndex={0}
             aria-label="Close menu"
             style={{
@@ -83,9 +83,10 @@ const Hamburger = () => {
               height: '100%',
               background: 'rgba(0,0,0,0.3)',
               zIndex: -1,
+              border: 'none',
+              cursor: 'pointer',
             }}
             onClick={() => setOpen(false)}
-            onKeyDown={(e) => e.key === 'Enter' && setOpen(false)}
           />
         </div>
       )}

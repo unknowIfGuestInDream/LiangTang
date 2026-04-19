@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 import Degree from './Education/Degree';
 
 const Education = ({ data = [] }) => (
@@ -13,16 +11,5 @@ const Education = ({ data = [] }) => (
     ))}
   </div>
 );
-
-Education.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      school: PropTypes.string,
-      degree: PropTypes.string,
-      link: PropTypes.string,
-      year: PropTypes.number,
-    }),
-  ),
-};
 
 export default Education;

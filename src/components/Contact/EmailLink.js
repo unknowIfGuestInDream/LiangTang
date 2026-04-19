@@ -1,13 +1,12 @@
 'use client';
 
-import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
 
 // Validates the first half of an email address.
 const validateText = (text) => {
   // NOTE: Passes RFC 5322 but not tested on google's standard.
   // eslint-disable-next-line no-useless-escape
-  const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))$/;
+  const re = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))$/;
   return re.test(text) || text.length === 0;
 };
 
@@ -83,6 +82,7 @@ const EmailLink = ({ loopMessage = false }) => {
   return (
     <div
       className="inline-container"
+      role="presentation"
       style={validateText(message) ? {} : { color: 'red' }}
       onMouseEnter={() => setIsActive(false)}
       onMouseLeave={() => idx < messages.length && setIsActive(true)}
@@ -93,10 +93,6 @@ const EmailLink = ({ loopMessage = false }) => {
       </a>
     </div>
   );
-};
-
-EmailLink.propTypes = {
-  loopMessage: PropTypes.bool,
 };
 
 export default EmailLink;

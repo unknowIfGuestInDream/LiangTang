@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 const SkillBar = ({ data, categories = [] }) => {
   const { category, competency, title } = data;
 
@@ -24,20 +22,6 @@ const SkillBar = ({ data, categories = [] }) => {
       <div className="skill-bar-percent">{competency} / 5</div>
     </div>
   );
-};
-
-SkillBar.propTypes = {
-  data: PropTypes.shape({
-    category: PropTypes.arrayOf(PropTypes.string).isRequired,
-    competency: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-  }).isRequired,
-  categories: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      color: PropTypes.string,
-    }),
-  ),
 };
 
 export default SkillBar;

@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import Cell from '@/components/Projects/Cell';
 import data from '@/data/projects';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'Projects',

@@ -1,5 +1,5 @@
-import Personal from '@/components/Stats/Personal';
 import Link from 'next/link';
+import Personal from '@/components/Stats/Personal';
 
 export const metadata = {
   title: 'Stats',

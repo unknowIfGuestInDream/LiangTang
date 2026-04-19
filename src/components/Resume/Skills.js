@@ -1,6 +1,5 @@
 'use client';
 
-import PropTypes from 'prop-types';
 import { Component } from 'react';
 
 import CategoryButton from './Skills/CategoryButton';
@@ -90,21 +89,5 @@ class Skills extends Component {
     );
   }
 }
-
-Skills.propTypes = {
-  skills: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      competency: PropTypes.number,
-      category: PropTypes.arrayOf(PropTypes.string),
-    }),
-  ),
-  categories: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      color: PropTypes.string,
-    }),
-  ),
-};
 
 export default Skills;

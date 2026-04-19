@@ -4,6 +4,9 @@ on:
   pull_request:
     branches: [ master ]
 
+permissions:
+  contents: read
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -92,13 +95,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [20.x, 22.x]
+        node-version: [22.x, 24.x]
         os: [ubuntu-latest, windows-latest, macos-latest]
         exclude:
           - os: windows-latest
-            node-version: 20.x
+            node-version: 22.x
           - os: macos-latest
-            node-version: 20.x
+            node-version: 22.x
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
