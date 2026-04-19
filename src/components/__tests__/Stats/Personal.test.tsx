@@ -41,7 +41,10 @@ describe('Personal', () => {
     render(<Personal />);
 
     const link = screen.getByRole('link', { name: /dalian/i });
-    expect(link).toHaveAttribute('href', 'https://en.wikipedia.org/wiki/Dalian');
+    expect(link).toHaveAttribute(
+      'href',
+      'https://en.wikipedia.org/wiki/Dalian',
+    );
   });
 
   it('updates age over time', async () => {
