@@ -76,7 +76,7 @@ describe('Footer', () => {
       'href',
       'https://beian.mps.gov.cn/#/query/webSearch?code=21020302000532',
     );
-    expect(screen.getByAltText('公安备案')).toHaveAttribute(
+    expect(screen.getByAltText('公安备案图标')).toHaveAttribute(
       'src',
       '/images/beian.png',
     );

@@ -46,9 +46,10 @@ export default function Footer() {
               >
                 <Image
                   src="/images/beian.png"
-                  alt="公安备案"
+                  alt="公安备案图标"
                   width={16}
                   height={16}
+                  className="footer-beian-icon"
                 />
                 辽公网安备21020302000532号
               </a>
