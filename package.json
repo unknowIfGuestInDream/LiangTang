@@ -8,7 +8,7 @@
     "url": "https://github.com/unknowIfGuestInDream/LiangTang.git"
   },
   "engines": {
-    "node": "^20.19.0 || ^22.13.0 || >=24.0.0"
+    "node": "24.x"
   },
   "scripts": {
     "dev": "next dev --turbopack",
