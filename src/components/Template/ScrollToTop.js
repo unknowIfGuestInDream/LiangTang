@@ -4,11 +4,12 @@ import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 
 const ScrollToTop = () => {
-  const _pathname = usePathname();
+  const pathname = usePathname();
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: pathname triggers scroll on route change
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [pathname]);
 
   return null;
 };
