@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import ContactIcons from '@/components/Contact/ContactIcons';
@@ -27,6 +28,30 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 Source
+              </a>
+            </p>
+            <p className="footer-beian">
+              <a
+                href="https://beian.miit.gov.cn/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                辽ICP备2021000033号
+              </a>
+              <a
+                className="footer-beian-police"
+                href="https://beian.mps.gov.cn/#/query/webSearch?code=21020302000532"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/images/beian.png"
+                  alt="公安备案图标"
+                  width={16}
+                  height={16}
+                  className="footer-beian-icon"
+                />
+                辽公网安备21020302000532号
               </a>
             </p>
           </div>

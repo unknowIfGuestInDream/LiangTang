@@ -63,4 +63,22 @@ describe('Footer', () => {
     const avatarLink = document.querySelector('.footer-avatar');
     expect(avatarLink).toHaveAttribute('href', '/');
   });
+
+  it('renders beian links and police icon', () => {
+    render(<Footer />);
+
+    expect(
+      screen.getByRole('link', { name: '辽ICP备2021000033号' }),
+    ).toHaveAttribute('href', 'https://beian.miit.gov.cn/');
+    expect(
+      screen.getByRole('link', { name: /辽公网安备21020302000532号/i }),
+    ).toHaveAttribute(
+      'href',
+      'https://beian.mps.gov.cn/#/query/webSearch?code=21020302000532',
+    );
+    expect(screen.getByAltText('公安备案图标')).toHaveAttribute(
+      'src',
+      '/images/beian.png',
+    );
+  });
 });
