@@ -17,13 +17,7 @@ describe('site stats data', () => {
   });
 
   it('has GitHub API stats with expected keys', () => {
-    const expectedKeys = [
-      'stargazers_count',
-      'subscribers_count',
-      'forks',
-      'open_issues_count',
-      'pushed_at',
-    ];
+    const expectedKeys = ['pushed_at'];
 
     // Verify each expected GitHub API key is present
     for (const key of expectedKeys) {
@@ -32,14 +26,10 @@ describe('site stats data', () => {
     }
   });
 
-  it('has static stats without keys', () => {
-    const staticStats = data.filter((s) => !s.key);
-
-    expect(staticStats.length).toBeGreaterThan(0);
-
-    // Check for known static stats
-    expect(staticStats.some((s) => s.label.includes('spoons'))).toBe(true);
-    expect(staticStats.some((s) => s.label.includes('linter'))).toBe(true);
+  it('only keeps the last updated stat', () => {
+    expect(data).toHaveLength(1);
+    expect(data[0].label).toBe('Last updated at');
+    expect(data[0].key).toBe('pushed_at');
   });
 
   it('stats with links have valid URLs', () => {
@@ -65,10 +55,8 @@ describe('site stats data', () => {
     expect(formatted).toBe('January 15, 2024');
   });
 
-  it('has spoons joke stat', () => {
-    const spoonsStat = data.find((s) => s.label === 'Number of spoons');
-
-    expect(spoonsStat).toBeDefined();
-    expect(spoonsStat!.value).toBeDefined();
+  it('does not include removed site stats', () => {
+    expect(data.some((s) => s.label === 'Number of spoons')).toBe(false);
+    expect(data.some((s) => s.label === 'Number of forks')).toBe(false);
   });
 });

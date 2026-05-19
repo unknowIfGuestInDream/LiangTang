@@ -44,19 +44,7 @@ describe('Site', () => {
     const Component = await Site();
     render(Component);
 
-    expect(
-      screen.getByText('Stars this repository has on github'),
-    ).toBeInTheDocument();
-    expect(screen.getByText('Number of forks')).toBeInTheDocument();
-    expect(screen.getByText('Number of spoons')).toBeInTheDocument();
-  });
-
-  it('displays static values for non-GitHub stats', async () => {
-    const Component = await Site();
-    render(Component);
-
-    expect(screen.getByText('Number of spoons')).toBeInTheDocument();
-    expect(screen.getByText('Number of linter warnings')).toBeInTheDocument();
+    expect(screen.getByText('Last updated at')).toBeInTheDocument();
   });
 
   it('fetches GitHub data at build time', async () => {
@@ -72,29 +60,21 @@ describe('Site', () => {
     );
   });
 
-  it('has links for GitHub-sourced stats', async () => {
+  it('has a link for the remaining GitHub-sourced stat', async () => {
     const Component = await Site();
     render(Component);
 
     const links = document.querySelectorAll(
-      'a[href="https://github.com/unknowIfGuestInDream/LiangTang/stargazers"]',
+      'a[href="https://github.com/unknowIfGuestInDream/LiangTang/commits"]',
     );
     expect(links.length).toBeGreaterThan(0);
   });
 
-  it('displays all expected stat categories', async () => {
+  it('only displays the last updated stat', async () => {
     const Component = await Site();
     render(Component);
 
-    expect(
-      screen.getByText('Stars this repository has on github'),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText('Number of people watching this repository'),
-    ).toBeInTheDocument();
-    expect(screen.getByText('Number of forks')).toBeInTheDocument();
-    expect(screen.getByText('Open github issues')).toBeInTheDocument();
-    expect(screen.getByText('Last updated at')).toBeInTheDocument();
+    expect(screen.getAllByText('Last updated at')).toHaveLength(1);
   });
 
   it('uses fallback data when fetch fails', async () => {
