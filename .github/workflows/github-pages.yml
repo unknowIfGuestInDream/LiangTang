@@ -53,7 +53,7 @@ jobs:
           fetch-depth: 0
 
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v3.4.5
+        uses: easingthemes/ssh-deploy@v6.0.3
         env:
           SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
           ARGS: "-avzr --delete"
