@@ -28,8 +28,8 @@ describe('site stats data', () => {
 
   it('only keeps the last updated stat', () => {
     expect(data).toHaveLength(1);
-    expect(data[0]?.label).toBe('Last updated at');
-    expect(data[0]?.key).toBe('pushed_at');
+    expect(data[0].label).toBe('Last updated at');
+    expect(data[0].key).toBe('pushed_at');
   });
 
   it('stats with links have valid URLs', () => {

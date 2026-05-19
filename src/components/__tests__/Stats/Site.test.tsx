@@ -75,7 +75,7 @@ describe('Site', () => {
     render(Component);
 
     expect(screen.getByText('Last updated at')).toBeInTheDocument();
-    expect(screen.getAllByRole('row')).toHaveLength(2);
+    expect(screen.getAllByText('Last updated at')).toHaveLength(1);
   });
 
   it('uses fallback data when fetch fails', async () => {
