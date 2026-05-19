@@ -18,7 +18,7 @@ const data: ContactItem[] = [
     icon: faGithub,
   },
   {
-    link: 'https://www.linkedin.cn/incareer/in/亮-唐-80351a201',
+    link: 'https://www.linkedin.com/in/%E4%BA%AE-%E5%94%90-03b47b375/',
     label: 'LinkedIn',
     icon: faLinkedinIn,
   },
