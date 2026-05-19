@@ -74,7 +74,6 @@ describe('Site', () => {
     const Component = await Site();
     render(Component);
 
-    expect(screen.getByText('Last updated at')).toBeInTheDocument();
     expect(screen.getAllByText('Last updated at')).toHaveLength(1);
   });
 
