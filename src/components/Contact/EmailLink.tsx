@@ -17,23 +17,9 @@ function prefersReducedMotion(): boolean {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
-const messages = [
-  'hi',
-  'hello',
-  'hola',
-  'you-can-email-me-at-literally-anything! Really',
-  'well, not anything. But most things',
-  'like-this',
-  'or-this',
-  'but not this :(  ',
-  'you.can.also.email.me.with.specific.topics.like',
-  'just-saying-hi',
-  'please-work-for-us',
-  'help',
-  'admin',
-  'or-I-really-like-your-website',
-  'thanks',
-];
+const EMAIL_LOCAL_PART = 'liang.tang.cx';
+const EMAIL_DOMAIN = '@gmail.com';
+const messages = [EMAIL_LOCAL_PART];
 
 function useInterval(callback: () => void, delay: number | null) {
   const savedCallback = useRef<() => void>(callback);
@@ -143,10 +129,7 @@ export default function EmailLink({ loopMessage = false }: EmailLinkProps) {
     state.isActive && !reducedMotion ? ANIMATION_TICK_MS : null,
   );
 
-  // Use 'hi' as default message when reduced motion or paused with empty message
-  const displayMessage =
-    reducedMotion || state.message === '' ? 'hi' : state.message;
-  const isValid = validateText(displayMessage);
+  const isValid = validateText(EMAIL_LOCAL_PART);
 
   const handlePause = () => dispatch({ type: 'PAUSE' });
   const handleResume = () => {
@@ -169,8 +152,8 @@ export default function EmailLink({ loopMessage = false }: EmailLinkProps) {
 
   const emailContent = (
     <>
-      <span className="contact-email-prefix">{displayMessage}</span>
-      <span className="contact-email-domain">@tlcsdm.com</span>
+      <span className="contact-email-prefix">{EMAIL_LOCAL_PART}</span>
+      <span className="contact-email-domain">{EMAIL_DOMAIN}</span>
     </>
   );
 
@@ -182,7 +165,7 @@ export default function EmailLink({ loopMessage = false }: EmailLinkProps) {
     >
       {isValid ? (
         <a
-          href={`mailto:${displayMessage}@tlcsdm.com`}
+          href={`mailto:${EMAIL_LOCAL_PART}${EMAIL_DOMAIN}`}
           className="contact-email-link"
           onClick={handleClick}
           onKeyDown={handleKeyDown}
