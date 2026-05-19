@@ -59,7 +59,7 @@ describe('EmailLink', () => {
     expect(prefix?.textContent).toBe('liang.tang.cx');
   });
 
-  it('pauses animation on mouse enter', async () => {
+  it('keeps the email text unchanged on mouse enter', async () => {
     render(<EmailLink />);
 
     const container = document.querySelector(
@@ -91,7 +91,7 @@ describe('EmailLink', () => {
     expect(prefixAfter).toBe(prefixBefore);
   });
 
-  it('resumes animation on mouse leave', async () => {
+  it('remains rendered after mouse leave', async () => {
     render(<EmailLink />);
 
     const container = document.querySelector(
@@ -141,7 +141,7 @@ describe('EmailLink', () => {
     );
   });
 
-  it('loops messages when loopMessage is true', async () => {
+  it('still renders when loopMessage is true', async () => {
     render(<EmailLink loopMessage={true} />);
 
     // Advance through all messages

@@ -6,12 +6,6 @@ import { useEffect, useReducer, useRef, useState } from 'react';
 const ANIMATION_TICK_MS = 50; // Tick length in milliseconds
 const HOLD_TICKS_AFTER_MESSAGE = 50; // Ticks to wait after message completes
 
-// Validates the first half of an email address per RFC 5322
-function validateText(text: string): boolean {
-  const re = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))$/;
-  return re.test(text) || text.length === 0;
-}
-
 function prefersReducedMotion(): boolean {
   if (typeof window === 'undefined') return false;
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -129,24 +123,10 @@ export default function EmailLink({ loopMessage = false }: EmailLinkProps) {
     state.isActive && !reducedMotion ? ANIMATION_TICK_MS : null,
   );
 
-  const isValid = validateText(EMAIL_LOCAL_PART);
-
   const handlePause = () => dispatch({ type: 'PAUSE' });
   const handleResume = () => {
     if (!reducedMotion) {
       dispatch({ type: 'RESUME', maxIdx: messages.length });
-    }
-  };
-
-  const handleClick = (e: React.MouseEvent) => {
-    if (!isValid) {
-      e.preventDefault();
-    }
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!isValid && (e.key === 'Enter' || e.key === ' ')) {
-      e.preventDefault();
     }
   };
 
@@ -163,26 +143,14 @@ export default function EmailLink({ loopMessage = false }: EmailLinkProps) {
       onMouseEnter={handlePause}
       onMouseLeave={handleResume}
     >
-      {isValid ? (
-        <a
-          href={`mailto:${EMAIL_LOCAL_PART}${EMAIL_DOMAIN}`}
-          className="contact-email-link"
-          onClick={handleClick}
-          onKeyDown={handleKeyDown}
-          onFocus={handlePause}
-          onBlur={handleResume}
-        >
-          {emailContent}
-        </a>
-      ) : (
-        <span
-          className="contact-email-link contact-email-link--invalid"
-          aria-disabled="true"
-          tabIndex={-1}
-        >
-          {emailContent}
-        </span>
-      )}
+      <a
+        href={`mailto:${EMAIL_LOCAL_PART}${EMAIL_DOMAIN}`}
+        className="contact-email-link"
+        onFocus={handlePause}
+        onBlur={handleResume}
+      >
+        {emailContent}
+      </a>
     </div>
   );
 }
