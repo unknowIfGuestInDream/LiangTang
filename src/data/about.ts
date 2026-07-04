@@ -26,5 +26,5 @@ At Ipdchina, I mainly use JavaFX and Eclipse RCP for development, and at the sam
 # My Other Sites
 
 - [Document (contains the knowledge that I think needs to be recorded on the way of learning)](https://www.tlcsdm.com)
-- [Blog (although it is said to be a blog, I have hardly run it)](https://blog.tlcsdm.com/)
+- [Blog (although it is said to be a blog, I have hardly run it)](https://intro.tlcsdm.com/)
 `;

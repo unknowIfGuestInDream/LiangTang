@@ -23,7 +23,7 @@ const data: ContactItem[] = [
     icon: faLinkedinIn,
   },
   {
-    link: 'https://blog.tlcsdm.com',
+    link: 'https://intro.tlcsdm.com',
     label: 'Blog',
     icon: faBlogger,
   },
