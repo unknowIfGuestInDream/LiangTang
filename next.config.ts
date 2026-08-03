@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
       '@fortawesome/react-fontawesome',
       '@fortawesome/fontawesome-svg-core',
     ],
+    useTypeScriptCli: true,
   },
 };
 
