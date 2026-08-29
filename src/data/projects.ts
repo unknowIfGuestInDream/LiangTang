@@ -301,7 +301,7 @@ const data: Project[] = [
     image: '/images/projects/jvm-explorer.png',
     date: '2026-08-29',
     desc: 'JVM Explorer is a Java desktop application for browsing loaded class files inside locally running Java Virtual Machines.',
-  }
+  },
 ];
 
 export default data;
