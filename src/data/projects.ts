@@ -261,12 +261,47 @@ const data: Project[] = [
     desc: 'Knowledge base built with docsify.',
   },
   {
-    title: 'tlcsdm-common',
-    subtitle: 'tlcsdm-common',
-    image: '/images/projects/tlcsdm_common.png',
-    date: '2022-04-23',
-    desc: 'Common Toolkit for tlcsdm.',
+    title: 'eclipse-rbe',
+    subtitle: 'eclipse-rbe',
+    image: '/images/projects/eclipse-rbe.png',
+    date: '2026-08-29',
+    desc: 'Eclipse plugin for editing Java resource bundles. Lets you manage all localized .properties files in one screen. Some features: sorted keys, warning icons on missing keys/values, conversion to/from Unicode, hierarchical view of keys, and more.',
   },
+  {
+    title: 'eclipse-ucdetector',
+    subtitle: 'eclipse-ucdetector',
+    image: '/images/projects/eclipse-ucdetector.png',
+    date: '2026-08-29',
+    desc: 'UCDetector (Unnecessary Code Detector - pronounced "You See Detector") is an Eclipse plug-in tool to find unnecessary (dead) public Java code.',
+  },
+  {
+    title: 'vscode-git-patch-exporter',
+    subtitle: 'vscode-git-patch-exporter',
+    image: '/images/projects/vscode-git-patch-exporter.png',
+    date: '2026-08-29',
+    desc: 'A VS Code extension that exports selected changed files from the **Source Control** view as a Git `.patch` file which can be re-applied later with `git apply`.',
+  },
+  {
+    title: 'InsightPC',
+    subtitle: 'InsightPC',
+    image: '/images/projects/InsightPC.png',
+    date: '2026-08-29',
+    desc: 'Visual implementation of OSHI, to view information about the system and hardware.',
+  },
+  {
+    title: 'patchVisualizer',
+    subtitle: 'patchVisualizer',
+    image: '/images/projects/patchVisualizer.png',
+    date: '2026-08-29',
+    desc: 'A JavaFX application for visualizing diff and patch files, supporting both Windows and Ubuntu environments.',
+  },
+  {
+    title: 'jvm-explorer',
+    subtitle: 'jvm-explorer',
+    image: '/images/projects/jvm-explorer.png',
+    date: '2026-08-29',
+    desc: 'JVM Explorer is a Java desktop application for browsing loaded class files inside locally running Java Virtual Machines.',
+  }
 ];
 
 export default data;
