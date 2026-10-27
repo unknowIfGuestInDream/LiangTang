@@ -101,9 +101,11 @@ grep -r "mldangelo" .
 
 1. Purchase a domain from Squarespace Domains, Cloudflare, or Namecheap
 2. Add your domain to `public/CNAME`:
+
    ```bash
    echo "yourdomain.com" > public/CNAME
    ```
+
 3. Configure DNS per [GitHub's documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
 
 ### Other Hosts
