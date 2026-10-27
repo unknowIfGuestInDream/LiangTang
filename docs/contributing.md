@@ -5,6 +5,7 @@ Contributions are encouraged. Please feel free to get in touch (I will happily p
 ## Guidelines
 
 Here are a few recommendations to land PRs quickly.
+
 - Small PRs are better than large PRs. If you do two unrelated things, split your changes into two PRs.
 - Review the [design goals](./design-goals.md).
 - Respect the [Contributor Covenant](https://www.contributor-covenant.org/).
