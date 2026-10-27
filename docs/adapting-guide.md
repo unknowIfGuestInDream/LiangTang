@@ -55,6 +55,7 @@ The site includes a blog at `/writing` with RSS feed. You can use it, customize 
 
 ```markdown
 ---
+
 title: 'Your Post Title'
 date: '2026-01-15'
 description: 'A brief description for previews and SEO.'
@@ -101,9 +102,11 @@ grep -r "mldangelo" .
 
 1. Purchase a domain from Squarespace Domains, Cloudflare, or Namecheap
 2. Add your domain to `public/CNAME`:
+
    ```bash
    echo "yourdomain.com" > public/CNAME
    ```
+
 3. Configure DNS per [GitHub's documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
 
 ### Other Hosts

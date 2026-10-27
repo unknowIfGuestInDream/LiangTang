@@ -21,7 +21,6 @@ npm test       # Vitest
 ## Customizing the data
 
 All personal data lives under [`src/data/`](src/data/):
-
 - `about.ts` — markdown shown on the About page
 - `contact.ts` — links shown on the Contact page and footer
 - `projects.ts` — projects shown on the Projects page

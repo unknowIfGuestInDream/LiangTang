@@ -38,7 +38,6 @@ docs/                 → Documentation
 ## Code Style
 
 **Do:**
-
 - Use TypeScript strict mode, functional components with hooks
 - Style with CSS custom properties in `app/styles/` (tokens in `tokens/`, components in `components/`)
 - Keep components small and focused
@@ -48,7 +47,6 @@ docs/                 → Documentation
 - Run `npm run format` before committing (CI enforces this)
 
 **Don't:**
-
 - Add new dependencies without clear need
 - Create god components or monolithic files
 - Hard-code colors—use CSS variables (`var(--color-*)`)

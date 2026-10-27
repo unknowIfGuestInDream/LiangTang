@@ -48,5 +48,4 @@ This projects attempts to follow these design principles. Feedback and discussio
 ## References
 
 For further reading, please review
-
 - React's [Design Principles](https://react.dev/learn/thinking-in-react).
